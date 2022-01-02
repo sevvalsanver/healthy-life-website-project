@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="websiteModelStoreContainer" CdmEntityContainer="websiteEntities">
+    <EntitySetMapping Name="comment">
+      <EntityTypeMapping TypeName="websiteModel.comment">
+        <MappingFragment StoreEntitySet="comment">
+          <ScalarProperty Name="commentId" ColumnName="commentId" />
+          <ScalarProperty Name="commentorName" ColumnName="commentorName" />
+          <ScalarProperty Name="commentorMail" ColumnName="commentorMail" />
+          <ScalarProperty Name="commentApprove" ColumnName="commentApprove" />
+          <ScalarProperty Name="commentDate" ColumnName="commentDate" />
+          <ScalarProperty Name="commentContent" ColumnName="commentContent" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="websiteModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trainer">
+      <EntityTypeMapping TypeName="websiteModel.trainer">
+        <MappingFragment StoreEntitySet="trainer">
+          <ScalarProperty Name="trainerId" ColumnName="trainerId" />
+          <ScalarProperty Name="trainerNameSurname" ColumnName="trainerNameSurname" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="websiteModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="usernameSurname" ColumnName="usernameSurname" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="passwd" ColumnName="passwd" />
+          <ScalarProperty Name="kg" ColumnName="kg" />
+          <ScalarProperty Name="boy" ColumnName="boy" />
+          <ScalarProperty Name="water" ColumnName="water" />
+          <ScalarProperty Name="area" ColumnName="area" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="birth" ColumnName="birth" />
+          <ScalarProperty Name="address" ColumnName="address" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="videos">
+      <EntityTypeMapping TypeName="websiteModel.videos">
+        <MappingFragment StoreEntitySet="videos">
+          <ScalarProperty Name="videoId" ColumnName="videoId" />
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="area" ColumnName="area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="admin">
+      <EntityTypeMapping TypeName="websiteModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="passwd" ColumnName="passwd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

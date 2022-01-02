@@ -1,0 +1,132 @@
+ .u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 957px;
+}
+
+.u-section-1 .u-layout-wrap-1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
+.u-section-1 .u-image-1 {
+  min-height: 790px;
+  background-image: url("images/saglikli-yasam-prensibleri1.jpg");
+  background-position: 50% 0%;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 0;
+}
+
+.u-section-1 .u-shape-1 {
+  width: 239px;
+  height: 239px;
+  background-image: linear-gradient(45deg, #f1b5b8, #db545a);
+  margin: 0 -159px 0 auto;
+}
+
+.u-section-1 .u-layout-cell-2 {
+  min-height: 790px;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 0;
+}
+
+.u-section-1 .u-text-1 {
+  text-decoration: none solid rgb(17, 17, 17);
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 255px 40px 0;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 1.25rem;
+  margin: 31px 40px 0;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 846px;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 583px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 583px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 700px;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 100px;
+  }
+
+  .u-section-1 .u-layout-cell-2 {
+    min-height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 953px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-right: 60px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-right: -30px;
+    margin-left: 30px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: -30px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 757px;
+  }
+
+  .u-section-1 .u-image-1 {
+    min-height: 443px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-right: 0;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 2.25rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

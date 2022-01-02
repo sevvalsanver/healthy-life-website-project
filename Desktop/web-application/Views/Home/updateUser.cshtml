@@ -1,0 +1,79 @@
+﻿@model web_project.ViewModel.userModel
+@{
+    ViewBag.Title = "updateUser";
+}
+
+<h2>Kullanıcı Kaydını Düzenle</h2>
+
+<div class="row">
+    <div class="col-md-4">
+        @using (Html.BeginForm("updateUser", "Home", FormMethod.Post))
+        {
+        @Html.HiddenFor(k=>k.id)
+            @Html.LabelFor(k => k.usernameSurname) <br />
+            @Html.TextBoxFor(k => k.usernameSurname, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.usernameSurname, null,
+                new { @class = "text-danger" })
+            <br />
+            <br />
+            @Html.LabelFor(k => k.email) <br />
+            @Html.TextBoxFor(k => k.email, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.email, null,
+                new { @class = "text-danger" })
+            <br />
+            <br />
+            @Html.LabelFor(k => k.boy) <br />
+            @Html.TextBoxFor(k => k.boy, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.boy, null,
+                new { @class = "text-danger" })
+            <br />
+            <br />
+            @Html.LabelFor(k => k.kg) <br />
+            @Html.TextBoxFor(k => k.kg, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.kg, null,
+                new { @class = "text-danger" })
+            <br />
+            <br />
+            @Html.LabelFor(k => k.kg) <br />
+            @Html.TextBoxFor(k => k.kg, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.kg, null,
+                new { @class = "text-danger" })
+            <br /><br />
+            @Html.LabelFor(k => k.passwd) <br />
+            @Html.TextBoxFor(k => k.passwd, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.passwd, null,
+                new { @class = "text-danger" })
+            <br /><br />
+            @Html.LabelFor(k => k.birth) <br />
+            @Html.TextBoxFor(k => k.birth, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.birth, null,
+                new { @class = "text-danger" })
+            <br /><br />
+            @Html.LabelFor(k => k.address) <br />
+            @Html.TextBoxFor(k => k.address, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.address, null,
+                new { @class = "text-danger" })
+            <br /><br />
+            @Html.LabelFor(k => k.water) <br />
+            @Html.TextBoxFor(k => k.water, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.water, null,
+                new { @class = "text-danger" })
+            <br /><br />
+            @Html.LabelFor(k => k.tel) <br />
+            @Html.TextBoxFor(k => k.tel, new { @class = "form-control" })
+            @Html.ValidationMessageFor(k => k.tel, null,
+                new { @class = "text-danger" })
+
+            <br />
+            <input type="submit" value="Kaydı Güncelle" class="btn btn-success" />
+            if (ViewBag.sonuc != null)
+            {
+                <div class="alert alert-success">@ViewBag.sonuc</div>
+            }
+
+        }
+    </div>
+</div>
+
+
+

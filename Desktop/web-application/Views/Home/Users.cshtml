@@ -1,0 +1,41 @@
+﻿@model IEnumerable<web_project.Models.users>
+@{
+    ViewBag.Title = "Users";
+}
+<!--Sadece admine gözüken sayfa-->
+
+<h2>Üye Olan Kullanıcılar</h2>
+@Html.ActionLink("Yeni Kayıt","addUser",null, new { @class="btn btn-primary"}) <br />
+<table class="table" border="1px solid black"  border-collapse="collapse"" >
+    <tr>
+        <td>ID</td>
+        <td>Adı Soyadı</td>
+        <td>E-mail Adresi</td>
+        <td>Ağırlığı</td>
+        <td>Boyu</td>
+        <td>Günlük Su Miktarı</td>
+        <td>Telefon Numarası</td>
+        <td>Doğum Tarihi</td>
+        <td>Adresi</td>
+        <td>Kaydı Düzenle</td>
+        <td>Kaydı Sil</td>
+    </tr>
+    @foreach (var user in Model)
+    {
+<tr>
+    <td>@user.id</td>
+    <td>@user.usernameSurname</td>
+    <td>@user.email</td>
+    <td>@user.kg</td>
+    <td>@user.boy</td>
+    <td>@user.water</td>
+    <td>@user.tel</td>
+    <td>@user.birth</td>
+    <td>@user.address</td>
+
+    <td>@Html.ActionLink("Düzenle", "updateUser", new { id = user.id }, new { @class = "btn btn-warning" })</td>
+    <td>@Html.ActionLink("Sil", "deleteUser", new { id = user.id }, new { @class = "btn btn-danger" })</td>
+</tr>
+    }
+</table>
+

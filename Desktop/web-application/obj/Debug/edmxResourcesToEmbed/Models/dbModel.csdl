@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="websiteModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="commentId" />
+    </Key>
+    <Property Name="commentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="commentorName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="commentorMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="commentApprove" Type="Boolean" />
+    <Property Name="commentDate" Type="DateTime" Precision="0" />
+    <Property Name="commentContent" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="trainer">
+    <Key>
+      <PropertyRef Name="trainerId" />
+    </Key>
+    <Property Name="trainerId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="trainerNameSurname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="tel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="usernameSurname" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passwd" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="kg" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="boy" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="water" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="area" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="tel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="birth" Type="DateTime" Precision="0" />
+    <Property Name="address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="videos">
+    <Key>
+      <PropertyRef Name="videoId" />
+    </Key>
+    <Property Name="videoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="url" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="area" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="username" />
+      <PropertyRef Name="passwd" />
+    </Key>
+    <Property Name="username" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="passwd" Type="String" MaxLength="15" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="websiteEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="comment" EntityType="Self.comment" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="trainer" EntityType="Self.trainer" />
+    <EntitySet Name="users" EntityType="Self.users" />
+    <EntitySet Name="videos" EntityType="Self.videos" />
+    <EntitySet Name="admin" EntityType="Self.admin" />
+  </EntityContainer>
+</Schema>

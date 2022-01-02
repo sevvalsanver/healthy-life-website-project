@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="websiteModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'website.dbo.admin' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="username" />
+      <PropertyRef Name="passwd" />
+    </Key>
+    <Property Name="username" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="passwd" Type="varchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <EntityType Name="comment">
+    <Key>
+      <PropertyRef Name="commentId" />
+    </Key>
+    <Property Name="commentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="commentorName" Type="varchar" MaxLength="50" />
+    <Property Name="commentorMail" Type="varchar" MaxLength="50" />
+    <Property Name="commentApprove" Type="bit" />
+    <Property Name="commentDate" Type="smalldatetime" />
+    <Property Name="commentContent" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="trainer">
+    <Key>
+      <PropertyRef Name="trainerId" />
+    </Key>
+    <Property Name="trainerId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="trainerNameSurname" Type="varchar" MaxLength="50" />
+    <Property Name="area" Type="varchar" MaxLength="50" />
+    <Property Name="tel" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="usernameSurname" Type="varchar" MaxLength="15" />
+    <Property Name="email" Type="varchar" MaxLength="50" />
+    <Property Name="passwd" Type="varchar" MaxLength="15" />
+    <Property Name="kg" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="boy" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="water" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="area" Type="varchar" MaxLength="15" />
+    <Property Name="tel" Type="varchar" MaxLength="15" />
+    <Property Name="birth" Type="date" />
+    <Property Name="address" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="videos">
+    <Key>
+      <PropertyRef Name="videoId" />
+    </Key>
+    <Property Name="videoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="url" Type="varchar" MaxLength="500" />
+    <Property Name="area" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="websiteModelStoreContainer">
+    <EntitySet Name="comment" EntityType="Self.comment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trainer" EntityType="Self.trainer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="videos" EntityType="Self.videos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="admin" EntityType="Self.admin" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [admin].[username] AS [username], 
+    [admin].[passwd] AS [passwd]
+    FROM [dbo].[admin] AS [admin]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
