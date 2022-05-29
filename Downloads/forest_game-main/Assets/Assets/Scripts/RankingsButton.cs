@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Button : MonoBehaviour
+public class RankingsButton : MonoBehaviour
 {
     public void DigerSahne()
     {
-        SceneManager.LoadScene("HomeScene");
+        SceneManager.LoadScene("Rankings");
     }
 }
